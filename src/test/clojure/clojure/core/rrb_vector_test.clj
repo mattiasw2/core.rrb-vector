@@ -23,7 +23,7 @@
                                {}
                                (.getCause e))))))))
 
-(deftest test-splicing
+(deftest test-splicing-2
   (testing "splicing"
     (is (dv/check-catvec 1025 1025 3245 1025 32768 1025 1025 10123 1025 1025))
     (is (dv/check-catvec 10 40 40 40 40 40 40 40 40))
