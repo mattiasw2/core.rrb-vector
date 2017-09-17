@@ -5,18 +5,16 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :min-lein-version "2.2.0"
   :parent [org.clojure/pom.contrib "0.1.2"]
-  :dependencies [[org.clojure/clojure "1.5.1"]]
+  :dependencies [[org.clojure/clojure "1.9.0-alpha20"]]
   :source-paths ["src/main/clojure"
                  "src/main/cljs"]
   :test-paths ["src/test/clojure"]
   :jvm-opts ^:replace ["-XX:+UseG1GC"]
   :profiles {:dev {:test-paths ["src/test_local/clojure"]
-                   :dependencies [[org.clojure/clojurescript "0.0-3153"]
-                                  [org.clojure/test.check "0.7.0"]
-                                  [collection-check "0.1.5"]]
-                   :plugins [[lein-cljsbuild "1.0.3"]]}
-             :1.6 {:dependencies [[org.clojure/clojure "1.6.0"]]}
-             :1.7 {:dependencies [[org.clojure/clojure "1.7.0-alpha5"]]}}
+                   :dependencies [[org.clojure/clojurescript "1.9.908"]
+                                  [org.clojure/test.check "0.9.0"]
+                                  [collection-check "0.1.7"]]
+                   :plugins [[lein-cljsbuild "1.1.7"]]}}
   :cljsbuild {:builds {:test {:source-paths ["src/main/cljs"
                                              "src/test/cljs"]
                               :compiler {:optimizations :advanced
